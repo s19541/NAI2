@@ -1,4 +1,5 @@
 Projekt programistyczny 2
+
 Celem jest napisanie programu, który pobiera następujące argumenty:
 • a – stała uczenia.
 • Train-set – nazwa pliku zawierającego zbiór treningowy w postaci CSV.
