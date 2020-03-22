@@ -60,7 +60,7 @@ public class Perceptron {
         System.out.println("Accuracy for Iris-Versicolor:"+accuracyCount2+"/"+(testSet.size()-setosaCount));
         System.out.println("Overall accuracy:"+(accuracyCount1+accuracyCount2)+"/"+testSet.size());
     }
-    public List<Double> study(String name){
+    private List<Double> study(String name){
         List<Double>w=new ArrayList<>();
         for (int i = 0; i < train_set.get(0).attributes.size() ; i++) {
             w.add(Math.random()*1);
@@ -92,14 +92,14 @@ public class Perceptron {
         this.t=t;
         return w;
     }
-    public List<Double>calc(List<Double>w,List<Double>x,int y,int d){
+    private List<Double>calc(List<Double>w,List<Double>x,int y,int d){
         List<Double>retw=new ArrayList<>();
         for (int i = 0; i < x.size(); i++) {
             retw.add(w.get(i)+(d-y)*a*x.get(i));
         }
         return retw;
     }
-    public double calcY(List<Double>w,List<Double>x){
+    private double calcY(List<Double>w,List<Double>x){
         double tmp=0;
         for (int i = 0; i < x.size(); i++) {
             tmp+=x.get(i)*w.get(i);
