@@ -12,14 +12,14 @@ public class Main {
         perceptron.checkTestFile(testSet);
         Scanner scanner = new Scanner(System.in);
         while(true){
-            System.out.println("Podaj wektory oddzielone spacja");
+            System.out.println("Enter vectors separated by a space");
             String vectors=scanner.nextLine();
             StringTokenizer tokenizer=new StringTokenizer(vectors," ");
             List<Double> vectorsT = new ArrayList<>();
             while(tokenizer.hasMoreTokens())
                 vectorsT.add(Double.parseDouble(tokenizer.nextToken()));
             if(vectorsT.size()!=perceptron.w.size()){
-                System.out.println("Podano nieprawidlowa ilosc argumentow");
+                System.out.println("Invalid number of arguments specified");
                 continue;
             }
             Iris irisToTest = new Iris(vectorsT,null);
